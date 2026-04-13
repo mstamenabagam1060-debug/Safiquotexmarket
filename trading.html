@@ -33,18 +33,32 @@ button {
 <body>
 
 <h1>Trading Dashboard</h1>
-<h3>Balance: $1000</h3>
+<h3 id="balance">Balance: $1000</h3>
 
 <button class="buy" onclick="buy()">BUY</button>
 <button class="sell" onclick="sell()">SELL</button>
 
 <script>
+let balance = 1000;
+
+function updateBalance() {
+  document.getElementById("balance").innerText = "Balance: $" + balance;
+}
+
 function buy() {
-  alert("Buy order placed!");
+  if(balance >= 100){
+    balance -= 100;
+    alert("Buy Success!");
+    updateBalance();
+  } else {
+    alert("Not enough balance!");
+  }
 }
 
 function sell() {
-  alert("Sell order placed!");
+  balance += 100;
+  alert("Sell Success!");
+  updateBalance();
 }
 </script>
 
