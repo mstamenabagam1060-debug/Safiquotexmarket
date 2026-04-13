@@ -1,52 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>AI Trade</title>
+<title>Trading</title>
 
 <style>
 body {
-  background:#0f172a;
-  color:white;
-  text-align:center;
-  font-family:Arial;
-}
-
-.nav {
-  padding:15px;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  font-family: Arial;
 }
 
 button {
-  padding:10px 20px;
-  margin:10px;
-  border:none;
-  cursor:pointer;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
 }
 
-.login {background:gray;}
-.register {background:green;}
+.buy {
+  background: green;
+  color: white;
+}
 
+.sell {
+  background: red;
+  color: white;
+}
 </style>
+
 </head>
 
 <body>
 
-<h1>AI Trade</h1>
+<h1>Trading Dashboard</h1>
+<h3>Balance: $1000</h3>
 
-<div class="nav">
-  <button class="login" onclick="goLogin()">Login</button>
-  <button class="register" onclick="goRegister()">Register</button>
-</div>
-
-<h2>AI দিয়ে স্মার্ট ট্রেডিং</h2>
+<button class="buy" onclick="buy()">BUY</button>
+<button class="sell" onclick="sell()">SELL</button>
 
 <script>
-function goLogin(){
-  window.location.href="login.html";
+function buy() {
+  alert("Buy order placed!");
 }
 
-function goRegister(){
-  alert("Register page coming soon!");
+function sell() {
+  alert("Sell order placed!");
 }
 </script>
 
