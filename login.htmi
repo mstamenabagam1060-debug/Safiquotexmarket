@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<style>
+body {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+}
+.box {
+  margin-top: 100px;
+}
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+button {
+  padding: 10px 20px;
+  background: #22c55e;
+  border: none;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>Login</h2>
+
+<input type="text" placeholder="Username"><br>
+<input type="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+</div>
+
+<script>
+function login() {
+  alert("Login Success (Demo)");
+  window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
