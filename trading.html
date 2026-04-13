@@ -1,64 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Trading</title>
+<body style="background:#0f172a;color:white;text-align:center;">
 
-<style>
-body {
-  background: #0f172a;
-  color: white;
-  text-align: center;
-  font-family: Arial;
-}
+<h1>Trading</h1>
+<h2 id="bal">Balance: 1000</h2>
 
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-}
-
-.buy {
-  background: green;
-  color: white;
-}
-
-.sell {
-  background: red;
-  color: white;
-}
-</style>
-
-</head>
-
-<body>
-
-<h1>Trading Dashboard</h1>
-<h3 id="balance">Balance: $1000</h3>
-
-<button class="buy" onclick="buy()">BUY</button>
-<button class="sell" onclick="sell()">SELL</button>
+<button onclick="buy()">BUY</button>
+<button onclick="sell()">SELL</button>
 
 <script>
-let balance = 1000;
+let b = 1000;
 
-function updateBalance() {
-  document.getElementById("balance").innerText = "Balance: $" + balance;
+function buy(){
+ b = b - 100;
+ document.getElementById("bal").innerText = "Balance: " + b;
 }
 
-function buy() {
-  if(balance >= 100){
-    balance -= 100;
-    alert("Buy Success!");
-    updateBalance();
-  } else {
-    alert("Not enough balance!");
-  }
-}
-
-function sell() {
-  balance += 100;
-  alert("Sell Success!");
-  updateBalance();
+function sell(){
+ b = b + 100;
+ document.getElementById("bal").innerText = "Balance: " + b;
 }
 </script>
 
