@@ -1,79 +1,54 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Trade Pro</title>
+<title>AI Trade</title>
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
-  text-align: center;
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  font-family:Arial;
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  background: #020617;
+  padding:15px;
 }
 
-.btn {
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  margin: 5px;
+button {
+  padding:10px 20px;
+  margin:10px;
+  border:none;
+  cursor:pointer;
 }
 
-.login { background: #ccc; }
-.register { background: #22c55e; color: white; }
+.login {background:gray;}
+.register {background:green;}
 
-.main {
-  margin-top: 50px;
-}
-
-.start {
-  background: #22c55e;
-  color: white;
-  padding: 15px 25px;
-  font-size: 18px;
-}
 </style>
 </head>
 
 <body>
 
+<h1>AI Trade</h1>
+
 <div class="nav">
-  <h3>AI Trade</h3>
-  <div>
-    <button class="btn login" onclick="goLogin()">লগইন</button>
-    <button class="btn register" onclick="goRegister()">রেজিস্টার</button>
-  </div>
+  <button class="login" onclick="goLogin()">Login</button>
+  <button class="register" onclick="goRegister()">Register</button>
 </div>
 
-<div class="main">
-  <h1>AI দিয়ে স্মার্ট ট্রেডিং</h1>
-  <p>AI সিগনাল ব্যবহার করে আয় করুন</p>
-
-  <button class="start" onclick="startTrading()">Start Trading</button>
-</div>
+<h2>AI দিয়ে স্মার্ট ট্রেডিং</h2>
 
 <script>
-function goLogin() {
-  window.location.href = "login.html";
+function goLogin(){
+  window.location.href="login.html";
 }
 
-function goRegister() {
+function goRegister(){
   alert("Register page coming soon!");
-}
-
-function startTrading() {
-  window.location.href = "trading.html";
 }
 </script>
 
 </body>
-</html>
+</html
